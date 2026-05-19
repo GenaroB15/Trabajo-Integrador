@@ -1,0 +1,11 @@
+p = [101, 102, 103, 104, 105, 106]
+q = [104, 105, 106, 107, 108]
+r = [102, 105, 109]
+
+usuario = [101, 102, 103, 104, 105, 106, 107, 108, 109]
+
+for g in range(9):
+    if ((usuario[g] in p) or (usuario[g] in q)) and (usuario[g] in r):
+        print(usuario[g], "Usuario Critico")
+    else:
+        print(usuario[g], "Usuario No Critico")
