@@ -1,0 +1,13 @@
+valores = [0, 10, 20, 30, 40, 50]
+
+for x in valores:
+
+    A = 40*x + 200
+    B = 70*x + 50
+    C = -2*x*x + 80*x + 100
+
+    print("x =", x)
+    print("A =", A)
+    print("B =", B)
+    print("C =", C)
+    print()

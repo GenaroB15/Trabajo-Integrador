@@ -1,0 +1,10 @@
+fila1 = [30, 20, 10]
+fila2 = [15, 25, 20]
+fila3 = [40, 10, 30]
+C = [fila1, fila2, fila3]
+for b in C:
+    suma = 0
+    for g in b:
+        suma = suma + g
+    promedio = suma / 3
+    print(promedio)
