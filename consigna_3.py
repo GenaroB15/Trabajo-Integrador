@@ -1,69 +1,45 @@
-# =========================================
-# MATRIZ CON LOS TIEMPOS DE EJECUCIÓN
-# =========================================
-
-# Cada fila representa una función
-# Cada columna representa un servidor
-
-tiempos = [
-    [120, 150, 100],
-    [200, 180, 220],
-    [90, 110, 95]
+M = [
+    [120,150,100],
+    [200,180,220],
+    [90,110,95]
 ]
 
-# ==================================================
-# PROMEDIO DE TIEMPO POR FUNCIÓN (POR FILAS)
-# ==================================================
+C = [
+    [30,20,10],
+    [15,25,20],
+    [40,10,30]
+]
 
-# Muestra un título en pantalla
-print("Tiempo promedio de cada función:")
+print("Promedio por funcion")
 
-# Recorre cada fila de la matriz
-for fila in range(len(tiempos)):
+for g in range(3):
 
-    # Variable para acumular la suma
-    acumulador = 0
+    tiempo_total = 0
+    cantidad_total = 0
 
-    # Recorre cada columna de la fila actual
-    for columna in range(len(tiempos[fila])):
+    for b in range(3):
 
-        # Suma cada valor de la fila
-        acumulador = acumulador + tiempos[fila][columna]
+        tiempo_total += (M[g][b] * C[g][b])
 
-    # Calcula el promedio de la fila
-    resultado = acumulador / len(tiempos[fila])
+        cantidad_total += C[g][b]
 
-    # Muestra el promedio de cada función
-    print("Función", fila + 1, "->", resultado, "milisegundos")
+    promedio = tiempo_total / cantidad_total
 
+    print(promedio)
 
-# ==================================================
-# PROMEDIO DE TIEMPO POR SERVIDOR (POR COLUMNAS)
-# ==================================================
+print("Promedio por servidor")
 
-# Salto de línea + título
-print("\nTiempo promedio de cada servidor:")
+for b in range(3):
 
-# Cantidad total de filas
-filas_totales = len(tiempos)
+    tiempo_total = 0
+    cantidad_total = 0
 
-# Cantidad total de columnas
-columnas_totales = len(tiempos[0])
+    for g in range(3):
 
-# Recorre cada columna
-for columna in range(columnas_totales):
+        tiempo_total += (M[g][b] * C[g][b])
 
-    # Reinicia el acumulador
-    acumulador = 0
+        cantidad_total += C[g][b]
 
-    # Recorre todas las filas
-    for fila in range(filas_totales):
+    promedio = tiempo_total / cantidad_total
 
-        # Suma los valores de la columna actual
-        acumulador = acumulador + tiempos[fila][columna]
-
-    # Calcula el promedio de cada columna
-    resultado = acumulador / filas_totales
-
-    # Muestra el promedio del servidor
-    print("Servidor", columna + 1, "->", resultado, "milisegundos")
+    print(promedio)
