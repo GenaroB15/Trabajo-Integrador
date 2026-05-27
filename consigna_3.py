@@ -33,7 +33,7 @@ for fila in range(len(tiempos)):
     # Calcula el promedio de la fila
     resultado = acumulador / len(tiempos[fila])
 
-    # Muestra el promedio de la función
+    # Muestra el promedio de cada función
     print("Función", fila + 1, "->", resultado, "milisegundos")
 
 
@@ -62,7 +62,7 @@ for columna in range(columnas_totales):
         # Suma los valores de la columna actual
         acumulador = acumulador + tiempos[fila][columna]
 
-    # Calcula el promedio de la columna
+    # Calcula el promedio de cada columna
     resultado = acumulador / filas_totales
 
     # Muestra el promedio del servidor
